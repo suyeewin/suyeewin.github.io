@@ -27,21 +27,23 @@
                     let java = document.getElementById("java").value;
                     let js = document.getElementById("javascript").value;
 
-                    if (flutter>=50 && java>= 50 && js>= 50){
+                    if (flutter >=50 && java>= 50 && js>= 50){
+                    if (flutter >80 ||  java > 80 || js >=80){
+                        let distinction= document.getElementById("exam_result");
+                        distinction.innerHTML = "<h1> This student is Distinction!</h1>";
+                    }else{
+
                         let pass = document.getElementById("exam_result");
                         // console.log(pass):
                         pass.innerHTML = "<h1> This student is Pass!</h1>";
+                    }
                     }else{
                         let fail = document.getElementById("exam_result");
                         // console.log(fail);
                         fail.innerHTML = "<h1> This student is Fail!</h1>";
                     }
-                    if (flutter >=80 && java >=80 && js >=80){
-                        let distinction= document.getElementById("exam_result");
-                        distinction.innerHTML = "<h1> This student is Distinction!</h1>";
                     
-                    }
-                        
+                                            
 
                     }
                     

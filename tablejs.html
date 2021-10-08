@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table JS</title>
+        </head>
+        <body>
+            <button onclick="showData()">Show</button>
+            <br><br>
+            <table border="1" cellpadding="10" cellspacing="0">
+        
+                <thead>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+
+            <script>
+                function showData(){
+                    let data = [
+                        {name:'Su Yee Win',age:'26'},
+                        {name:'Mg Mg',age:27},
+                        {name:'Hla Hla',age:27}
+                    ]
+                    console.log(data);
+                    let tbody = document.querySelector("#tbody");
+                    let mydata = '';
+                    let i = 1;
+                    for (const value of data) {
+                        // console.log(value.name):
+                        mydata += `<tr>
+                            <td>${i++}</td>
+                            <td>${value.name}</td>
+                            <td>${value.age}</td>
+                            
+                            </tr>`;
+
+                        
+                    }
+                    tbody.innerHTML = mydata;
+
+                    
+                }
+            </script>
+
+        
+
+            
+
+
+
+            </body>
+            </html>
